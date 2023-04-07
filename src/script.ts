@@ -1,6 +1,6 @@
 import './style.css';
 import * as THREE from 'three';
-import { Viewer } from './src/classes/viewer';
+import { Viewer } from './classes/viewer';
 
 // Canvas
 const canvas = document.querySelector<HTMLCanvasElement>('canvas.webgl');
