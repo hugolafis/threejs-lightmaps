@@ -4,7 +4,7 @@
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
     "start": "webpack serve --config ./bundler/webpack.dev.js",
-    "pages": "yarn build && git subtree push --prefix dist origin gh-pages"
+    "pages": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@babel/core": "^7.16.12",
