@@ -35,6 +35,9 @@ export class Viewer {
 
   toggleAlbedo(active: boolean) {
     this.material.map = active ? this.albedo : undefined;
+    this.material.color = active
+      ? new THREE.Color(0xffffff)
+      : new THREE.Color(0x7f7f7f);
     this.material.needsUpdate = true;
   }
 
@@ -102,7 +105,6 @@ export class Viewer {
     const hdrLoader = new RGBELoader();
 
     const terrain = await fbxLoader.loadAsync('./assets/meshes/terrain.fbx');
-    //terrain.scale.multiplyScalar(0.01);
 
     terrain.rotateY(Math.PI / 2);
 
